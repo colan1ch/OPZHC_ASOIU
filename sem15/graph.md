@@ -4,6 +4,7 @@ config:
   theme: neo
   look: neo
 ---
+```mermaid
 stateDiagram-v2
   direction TB
 
@@ -49,3 +50,4 @@ stateDiagram-v2
     Дефицит: <u>Дефицит</u><br>entry/ упущенные_продажи += 1
     Дефицит --> Отгрузка_товара : пополнение
   }
+```
