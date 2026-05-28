@@ -47,8 +47,8 @@ def packet_flow(env, pkt_id, ch1, ch2):
         if show_log:
             print(f"[{env.now:.1f} мс] Пакет {pkt_id} ДОСТАВЛЕН (Задержка: {latency:.1f} мс)")
 
-        if is_boosted and drop_series > 0:
-            drop_series = 0
+        drop_series = 0
+        if is_boosted:
             is_boosted = False
             tx_delay = 5.0
             print(f"[{env.now:.1f} мс] >>> ДОП. РЕСУРС ОТКЛЮЧЕН (Задержка канала: 5.0 мс)")
